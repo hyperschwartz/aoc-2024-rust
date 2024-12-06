@@ -57,9 +57,7 @@ mod day6 {
             });
         });
         let mut solution_count: u64 = 0;
-        let mut attempt_count: u64 = 0;
         for new_obstacle in possible_obstacles.iter() {
-            attempt_count += 1;
             let mut current_grid = grid.clone();
             let altered_tile = get_item_at(&mut current_grid, new_obstacle.x, new_obstacle.y);
             match altered_tile.tile_type {
